@@ -1,0 +1,97 @@
+$dimgray: #5d5455;
+$tomato: #ea4033;
+$darksalmon: #e5a67b;
+$peachpuff: #f2d6c7;
+$seagreen: #9dbc9d;
+$lightgray: #6d8ba7;
+
+body {
+  background-color: $dimgray;
+  margin: 0;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.container {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-rows: 100px 100px 25px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner {
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: darken( $seagreen, 10% );
+}
+
+#countdown {
+  grid-column: 1 / 5;
+  grid-row: 2 / 4;
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-rows: 100px 25px;
+  text-align: center;
+  align-items: center;
+  color: $peachpuff;
+}
+
+.days {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  background-color: $tomato;
+}
+
+.days-label {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.hours {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  background-color: $seagreen;
+}
+
+.hours-label {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.minutes {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  background-color: $darksalmon;
+}
+
+.minutes-label {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+.seconds {
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+  background-color: $lightgray;
+}
+
+.seconds-label {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+
+.timer {
+  font-size: 3em;
+  border-radius: 50%;
+  line-height: 100px;
+}
