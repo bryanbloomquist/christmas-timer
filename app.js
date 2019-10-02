@@ -1,18 +1,34 @@
-let year, month, day, deadline;
+let date, month, day, year, deadline;
+let eventdate = "12-25";
+let event = "Christmas";
+// let variable1 = "02-15 Bryan's Birthday";
+// let variabledate = variable1.slice( 0, 5 );
+// let variableevent = variable1.slice( 6 );
+// console.log( variabledate );
+// console.log( variableevent );
 
-const getDate = () => {
-  year = new Date().getFullYear();
-  month = new Date().getMonth() + 1;
-  day = new Date().getDate();
-  if ( month === 12 && day > 24 ) {
-    year = year + 1;
-  }
-  document.getElementById( "year" ).innerHTML = year;
-  deadline = new Date( "Dec 24, " + year + " 23:59:59" );
-  startClock( "countdown", deadline );
+const checkRadio = ( radio ) => {
+  eventdate = radio.value.slice( 0, 5 );
+  event = radio.value.slice( 6 );
+  getDate();
 }
 
-remainingTime = ( endtime ) => {
+const getDate = () => {
+  month = eventdate.slice( 0, 2 )
+  day = eventdate.slice( 3, 5 );
+  year = new Date().getFullYear();
+  currentdate = new Date().toJSON().slice( 5, 10 )
+  if ( currentdate >= eventdate ) {
+    year += 1;
+  }
+  document.getElementById( "event" ).innerHTML = event;
+  document.getElementById( "year" ).innerHTML = year;
+  deadline = new Date( month + " " + day + ", " + year + " 00:00:00" );
+  console.log( deadline );
+  startClock( "container", deadline );
+}
+
+const remainingTime = ( endtime ) => {
   let time = Date.parse( endtime ) - Date.parse( new Date() );
   let seconds = Math.floor(( time / 1000 ) % 60);
   let minutes = Math.floor(( time / 1000 / 60 ) % 60);
