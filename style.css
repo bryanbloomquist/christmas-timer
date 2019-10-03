@@ -1,92 +1,86 @@
+html {
+  font-size: 62.5%;
+}
+
 body {
   background-color: #5d5455;
-  margin: 0;
 }
 
-.page {
+#container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-}
-
-.container {
-  grid-column: 2/3;
-  grid-row: 2/3;
-  display: grid;
-  grid-template-columns: 100px 100px 100px 100px;
-  grid-template-rows: 100px 100px 25px;
+  grid-template-columns: repeat(4, 9rem);
+  grid-template-rows: 9rem 9rem 2.5rem 18rem;
+  grid-gap: 1rem;
+  padding: 4rem 2rem;
   text-align: center;
   align-items: center;
   justify-content: center;
+  color: #f2d6c7;
+  font-size: 1.6rem;
 }
 
 .banner {
-  grid-column: 1/5;
-  grid-row: 1/2;
-  font-size: 2.5em;
+  grid-column: 1/span 4;
+  grid-row: 1/span 1;
+  font-size: 4rem;
   font-weight: 600;
   color: #7fa77f;
-}
-
-#countdown {
-  grid-column: 1/5;
-  grid-row: 2/4;
-  display: grid;
-  grid-template-columns: 100px 100px 100px 100px;
-  grid-template-rows: 100px 25px;
-  text-align: center;
-  align-items: center;
-  color: #f2d6c7;
-}
-
-.days {
-  grid-column: 1/2;
-  grid-row: 1/2;
-  background-color: #ea4033;
-}
-
-.days-label {
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
-
-.hours {
-  grid-column: 2/3;
-  grid-row: 1/2;
-  background-color: #9dbc9d;
-}
-
-.hours-label {
-  grid-column: 2/3;
-  grid-row: 2/3;
-}
-
-.minutes {
-  grid-column: 3/4;
-  grid-row: 1/2;
-  background-color: #e5a67b;
-}
-
-.minutes-label {
-  grid-column: 3/4;
-  grid-row: 2/3;
-}
-
-.seconds {
-  grid-column: 4/5;
-  grid-row: 1/2;
-  background-color: #6d8ba7;
-}
-
-.seconds-label {
-  grid-column: 4/5;
-  grid-row: 2/3;
 }
 
 .timer {
   font-size: 3em;
   border-radius: 50%;
-  line-height: 100px;
+  line-height: 9rem;
+}
+
+#days {
+  grid-column: 1/span 1;
+  grid-row: 2/span 1;
+  background-color: #ea4033;
+}
+
+.days-label {
+  grid-column: 1/span 1;
+  grid-row: 3/span 1;
+}
+
+#hours {
+  grid-column: 2/span 1;
+  grid-row: 2/span 1;
+  background-color: #e5a67b;
+}
+
+.hours-label {
+  grid-column: 2/span 1;
+  grid-row: 3/span 1;
+}
+
+#minutes {
+  grid-column: 3/span 1;
+  grid-row: 2/span 1;
+  background-color: #9dbc9d;
+}
+
+.minutes-label {
+  grid-column: 3/span 1;
+  grid-row: 3/span 1;
+}
+
+#seconds {
+  grid-column: 4/span 1;
+  grid-row: 2/span 1;
+  background-color: #6d8ba7;
+}
+
+.seconds-label {
+  grid-column: 4/span 1;
+  grid-row: 3/span 1;
+}
+
+.optionform {
+  grid-column: 2/span 2;
+  grid-row: 4/span 1;
+  text-align: left;
 }
 
 /*# sourceMappingURL=style.css.map */

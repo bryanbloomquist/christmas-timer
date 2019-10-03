@@ -1,50 +1,50 @@
-let year, month, day, deadline;
+let interval;
+let eventdate = "12-25";
+let eventname = "Christmas";
 
-const getDate = () => {
-  year = new Date().getFullYear();
-  month = new Date().getMonth() + 1;
-  day = new Date().getDate();
-  if ( month === 12 && day > 24 ) {
-    year = year + 1;
-  }
-  document.getElementById( "year" ).innerHTML = year;
-  deadline = new Date( "Dec 24, " + year + " 23:59:59" );
-  startClock( "countdown", deadline );
+const checkRadio = ( radio ) => {
+  eventdate = radio.value.slice( 0, 5 );
+  eventname = radio.value.slice( 6 );
+  clearInterval( interval );
+  getDate( eventdate, eventname );
 }
 
-remainingTime = ( endtime ) => {
-  let time = Date.parse( endtime ) - Date.parse( new Date() );
-  let seconds = Math.floor(( time / 1000 ) % 60);
-  let minutes = Math.floor(( time / 1000 / 60 ) % 60);
-  let hours = Math.floor(( time / ( 1000 * 60 * 60 )) % 24 );
-  let days = Math.floor( time / ( 1000 * 60 * 60 * 24 ));
+const getDate = ( date, name ) => {
+  let month = date.slice( 0, 2 )
+  let day = date.slice( 3, 5 );
+  let year = new Date().getFullYear();
+  currentdate = new Date().toJSON().slice( 5, 10 )
+  if ( currentdate >= date ) { year += 1; }
+  document.getElementById( "event" ).innerHTML = name;
+  document.getElementById( "year" ).innerHTML = year;
+  let deadline = new Date( month + " " + day + ", " + year + " 00:00:00" );
+  startClock( deadline );
+}
+
+const startClock = ( deadline ) => {
+  updateClock( deadline );
+  interval = setInterval( function() {
+    updateClock( deadline );
+  }, 1000 );
+}
+
+const updateClock = ( deadline ) => {
+  let time = remainingTime( deadline );
+  document.getElementById( "days" ).innerHTML = time.days;
+  document.getElementById( "hours" ).innerHTML = time.hours;
+  document.getElementById( "minutes" ).innerHTML = time.minutes;
+  document.getElementById( "seconds" ).innerHTML = time.seconds;
+}
+
+const remainingTime = ( deadline ) => {
+  let distance = Date.parse( deadline ) - Date.parse( new Date() );
+  let days = Math.floor( distance / ( 1000 * 60 * 60 * 24 ));
+  let hours = Math.floor(( distance / ( 1000 * 60 * 60 )) % 24 );
+  let minutes = Math.floor(( distance / 1000 / 60 ) % 60);
+  let seconds = Math.floor(( distance / 1000 ) % 60);
   return {
-    "total": time,
-    "days": days,
-    "hours": hours,
-    "minutes": minutes,
-    "seconds": seconds
+    "days": days, "hours": hours, "minutes": minutes, "seconds": seconds
   };
 }
 
-const startClock = ( id, endtime ) => {
-  let clock = document.getElementById( id );
-  let daysSpan = clock.querySelector( ".days" );
-  let hoursSpan = clock.querySelector( ".hours" );
-  let minutesSpan = clock.querySelector( ".minutes" );
-  let secondsSpan = clock.querySelector( ".seconds" );
-  const updateClock = () => {
-    let time = remainingTime( endtime );
-    daysSpan.innerHTML = time.days;
-    hoursSpan.innerHTML = ( "0" + time.hours ).slice( -2 );
-    minutesSpan.innerHTML = ( "0" + time.minutes ).slice( -2 );
-    secondsSpan.innerHTML = ( "0" + time.seconds ).slice( -2 );
-    if ( time.total <= 0 ) {
-      clearInterval( timeinterval );
-    }
-  }
-  updateClock();
-  let timeinterval = setInterval( updateClock, 1000 );
-}
-
-getDate();
+getDate( eventdate, eventname );
