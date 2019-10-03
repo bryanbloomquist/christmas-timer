@@ -1,24 +1,21 @@
-$background: #5d5455;
-$colortext: #f2d6c7;
-$color1: #ea4033;
-$color2: #e5a67b;
-$color3: #9dbc9d;
-$color4: #6d8ba7;
+html {
+  font-size: 62.5%;
+}
 
-html { font-size: 62.5%; }
-
-body { background-color: $background; }
+body {
+  background-color: #5d5455;
+}
 
 #container {
   display: grid;
-  grid-template-columns: repeat( 4, 9rem );
-  grid-template-rows: 9rem 9rem 2.5rem 18rem;
+  grid-template-columns: repeat(4, 9rem);
+  grid-template-rows: 15rem 9rem 2.5rem 18rem;
   grid-gap: 1rem;
   padding: 4rem 2rem;
   text-align: center;
   align-items: center;
   justify-content: center;
-  color: $colortext;
+  color: #f2d6c7;
   font-size: 1.6rem;
 }
 
@@ -27,7 +24,7 @@ body { background-color: $background; }
   grid-row: 1/span 1;
   font-size: 4rem;
   font-weight: 600;
-  color: darken( $color3, 10% );
+  color: #7fa77f;
 }
 
 .timer {
@@ -39,7 +36,7 @@ body { background-color: $background; }
 #days {
   grid-column: 1/span 1;
   grid-row: 2/span 1;
-  background-color: $color1;
+  background-color: #ea4033;
 }
 
 .days-label {
@@ -50,7 +47,7 @@ body { background-color: $background; }
 #hours {
   grid-column: 2/span 1;
   grid-row: 2/span 1;
-  background-color: $color2;
+  background-color: #e5a67b;
 }
 
 .hours-label {
@@ -61,7 +58,7 @@ body { background-color: $background; }
 #minutes {
   grid-column: 3/span 1;
   grid-row: 2/span 1;
-  background-color: $color3;
+  background-color: #9dbc9d;
 }
 
 .minutes-label {
@@ -72,7 +69,7 @@ body { background-color: $background; }
 #seconds {
   grid-column: 4/span 1;
   grid-row: 2/span 1;
-  background-color: $color4;
+  background-color: #6d8ba7;
 }
 
 .seconds-label {
@@ -84,4 +81,7 @@ body { background-color: $background; }
   grid-column: 2/span 2;
   grid-row: 4/span 1;
   text-align: left;
+  font-size: 2rem;
 }
+
+/*# sourceMappingURL=style.css.map */

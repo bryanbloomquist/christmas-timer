@@ -4,12 +4,12 @@
     <meta charset = "UTF-8">
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <meta http-equiv = "X-UA-Compatible" content = "ie=edge">
-    <link rel = "stylesheet" type = "text/css" href = "./style.css">
+    <link rel = "stylesheet" type = "text/css" href = "./assets/css/style.css">
     <title>Countdown to Christmas</title>
   </head>
   <body>
     <div id = "container">
-      <div class = "banner">Days Left Until <span id = "event"></span> <span id = "year"></span></div>
+      <div class = "banner">Time Left Until <span id = "event"></span> <span id = "year"></span></div>
       <div class = "timer" id = "days"></div>
       <div class = "days-label">Days</div>
       <div class = "timer" id = "hours"></div>
@@ -19,14 +19,15 @@
       <div class = "timer" id = "seconds"></div>
       <div class = "seconds-label">Seconds</div>
       <form class = "optionform">
-        <input type = "radio" name = "option" onchange = checkRadio(this) value = "12-25 Christmas" checked>Christmas<br />
-        <input type = "radio" name = "option" onchange = checkRadio(this) value = "10-31 Halloween">Halloween<br />
+        <input type = "radio" name = "option" onchange = checkRadio(this) value = "01-01 New Year's Day">New Year's Day<br />
+        <input type = "radio" name = "option" onchange = checkRadio(this) value = "02-14 Valentine's Day">Valentine's Day<br />
         <input type = "radio" name = "option" onchange = checkRadio(this) value = "03-06 Molly's Birthday">Molly's Birthday<br />
+        <input type = "radio" name = "option" onchange = checkRadio(this) value = "06-04 Independence Day">Independence Day<br />
+        <input type = "radio" name = "option" onchange = checkRadio(this) value = "10-31 Halloween">Halloween<br />
         <input type = "radio" name = "option" onchange = checkRadio(this) value = "12-18 Autumn's Birthday">Autumn's Birthday<br />
-        <input type = "radio" name = "option" onchange = checkRadio(this) value = "12-18 Jenni's Birthday">Jenni's Birthday<br />
-        <input type = "radio" name = "option" onchange = checkRadio(this) value = "02-15 Bryan's Birthday">Bryan's Birthday<br />
+        <input type = "radio" name = "option" onchange = checkRadio(this) value = "12-25 Christmas" checked>Christmas<br />
       </form>
     </div>
-    <script src = "./app.js"></script>
+    <script src = "./assets/script/app.js"></script>
   </body>
 </html>
