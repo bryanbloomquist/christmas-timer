@@ -36,7 +36,7 @@ body { background-color: $background; }
   line-height: 9rem;
 }
 
-.days {
+#days {
   grid-column: 1/span 1;
   grid-row: 2/span 1;
   background-color: $color1;
@@ -47,7 +47,7 @@ body { background-color: $background; }
   grid-row: 3/span 1;
 }
 
-.hours {
+#hours {
   grid-column: 2/span 1;
   grid-row: 2/span 1;
   background-color: $color2;
@@ -58,7 +58,7 @@ body { background-color: $background; }
   grid-row: 3/span 1;
 }
 
-.minutes {
+#minutes {
   grid-column: 3/span 1;
   grid-row: 2/span 1;
   background-color: $color3;
@@ -69,7 +69,7 @@ body { background-color: $background; }
   grid-row: 3/span 1;
 }
 
-.seconds {
+#seconds {
   grid-column: 4/span 1;
   grid-row: 2/span 1;
   background-color: $color4;
