@@ -1,6 +1,7 @@
 let interval;
 let eventdate = "12-25";
 let eventname = "Christmas";
+let months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ]
 
 const checkRadio = ( radio ) => {
   eventdate = radio.value.slice( 0, 5 );
@@ -19,7 +20,8 @@ const getDate = ( eventdate, eventname ) => {
   if ( currentdate >= eventdate ) { year += 1; }
   document.getElementById( "event" ).innerHTML = eventname;
   document.getElementById( "year" ).innerHTML = year;
-  let deadline = new Date( month + " " + day + ", " + year + " 00:00:00" );
+  let mon = months[ month - 1 ];
+  let deadline = new Date( mon + " " + day + ", " + year + " 00:00:00" );
   console.log( deadline );
   startClock( deadline );
 }
