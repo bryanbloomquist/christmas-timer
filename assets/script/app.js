@@ -17,7 +17,7 @@ const getDate = ( eventdate, eventname ) => {
   if ( currentdate >= eventdate ) { year += 1; }
   document.getElementById( "event" ).innerHTML = eventname;
   document.getElementById( "year" ).innerHTML = year;
-  let deadline = year + "-" + month + "-" + day + " 00:00:00";
+  let deadline = new Date( year, month, day, "00", "00", "00" );
   startClock( deadline );
 }
 
