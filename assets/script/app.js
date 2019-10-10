@@ -13,11 +13,14 @@ const getDate = ( eventdate, eventname ) => {
   let month = parseInt( eventdate.slice( 0, 2 ));
   let day = parseInt( eventdate.slice( 3, 5 ));
   let year = new Date().getFullYear();
+  console.log( month, day, year );
+  console.log( typeof month, typeof day, typeof year );
   currentdate = new Date().toJSON().slice( 5, 10 )
   if ( currentdate >= eventdate ) { year += 1; }
   document.getElementById( "event" ).innerHTML = eventname;
   document.getElementById( "year" ).innerHTML = year;
   let deadline = new Date( month + " " + day + ", " + year + " 00:00:00" );
+  console.log( deadline );
   startClock( deadline );
 }
 
