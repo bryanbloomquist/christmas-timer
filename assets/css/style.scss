@@ -11,8 +11,8 @@ body { background-color: $background; }
 
 #container {
   display: grid;
-  grid-template-columns: repeat( 4, 9rem );
-  grid-template-rows: 15rem 9rem 2.5rem 18rem;
+  grid-template-columns: repeat( 4, 8rem );
+  grid-template-rows: 15rem 8rem 2.5rem 18rem;
   grid-gap: 1rem;
   padding: 4rem 2rem;
   text-align: center;
@@ -33,7 +33,7 @@ body { background-color: $background; }
 .timer {
   font-size: 3em;
   border-radius: 50%;
-  line-height: 9rem;
+  line-height: 8rem;
 }
 
 #days {
@@ -81,7 +81,7 @@ body { background-color: $background; }
 }
 
 .optionform {
-  grid-column: 2/span 2;
+  grid-column: 2/span 3;
   grid-row: 4/span 1;
   text-align: left;
   font-size: 2rem;
