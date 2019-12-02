@@ -1,13 +1,16 @@
-$background: #5d5455;
-$colortext: #f2d6c7;
-$color1: #ea4033;
-$color2: #e5a67b;
-$color3: #9dbc9d;
-$color4: #6d8ba7;
+$colortext: #222222;
+$color1: firebrick;
+$color2: rebeccapurple;
+$color3: olivedrab;
+$color4: royalblue;
 
 html { font-size: 62.5%; }
 
-body { background-color: $background; }
+body { 
+  background-image: linear-gradient(white, royalblue);
+  height: 100vh;
+  margin: 0px;
+}
 
 #container {
   display: grid;
@@ -27,13 +30,15 @@ body { background-color: $background; }
   grid-row: 1/span 1;
   font-size: 4rem;
   font-weight: 600;
-  color: darken( $color3, 10% );
+  color: $color1;
 }
 
 .timer {
   font-size: 3em;
   border-radius: 50%;
   line-height: 8rem;
+  color: white;
+  border: 2px solid white;
 }
 
 #days {

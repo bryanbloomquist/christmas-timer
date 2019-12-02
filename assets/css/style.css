@@ -3,7 +3,9 @@ html {
 }
 
 body {
-  background-color: #5d5455;
+  background-image: linear-gradient(white, royalblue);
+  height: 100vh;
+  margin: 0px;
 }
 
 #container {
@@ -15,7 +17,7 @@ body {
   text-align: center;
   align-items: center;
   justify-content: center;
-  color: #f2d6c7;
+  color: #222222;
   font-size: 1.6rem;
 }
 
@@ -24,19 +26,21 @@ body {
   grid-row: 1/span 1;
   font-size: 4rem;
   font-weight: 600;
-  color: #7fa77f;
+  color: firebrick;
 }
 
 .timer {
   font-size: 3em;
   border-radius: 50%;
   line-height: 8rem;
+  color: white;
+  border: 2px solid white;
 }
 
 #days {
   grid-column: 1/span 1;
   grid-row: 2/span 1;
-  background-color: #ea4033;
+  background-color: firebrick;
 }
 
 .days-label {
@@ -47,7 +51,7 @@ body {
 #hours {
   grid-column: 2/span 1;
   grid-row: 2/span 1;
-  background-color: #e5a67b;
+  background-color: rebeccapurple;
 }
 
 .hours-label {
@@ -58,7 +62,7 @@ body {
 #minutes {
   grid-column: 3/span 1;
   grid-row: 2/span 1;
-  background-color: #9dbc9d;
+  background-color: olivedrab;
 }
 
 .minutes-label {
@@ -69,7 +73,7 @@ body {
 #seconds {
   grid-column: 4/span 1;
   grid-row: 2/span 1;
-  background-color: #6d8ba7;
+  background-color: royalblue;
 }
 
 .seconds-label {
