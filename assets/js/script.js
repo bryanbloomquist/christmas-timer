@@ -1,16 +1,17 @@
 const runApp = () => {
 
   const events = [
-    ["12-25", "christmas", "christmas"],
-    ["10-31", "halloween", "halloween"],
-    ["07-04", "independance day", "independance"],
+    ["01-01", "new year's day", "newyears"],
+    ["02-14", "valentine's day", "valentines"],
     ["05-04", "may the fourth", "starwars"],
-    ["02-14", "valentine's day", "valentines"]
+    ["07-04", "independance day", "independance"],
+    ["10-31", "halloween", "halloween"],
+    ["12-25", "christmas", "christmas"]
   ];
   let interval, deadline;
-  let eventDate = events[0][0];
-  let eventName = events[0][1];
-  let eventStyle = events[0][2];
+  let eventDate = events[5][0];
+  let eventName = events[5][1];
+  let eventStyle = events[5][2];
   const bodyEl = document.querySelector("body");
   const eventEl = document.getElementById("event");
   const yearEl = document.getElementById("year");
@@ -19,26 +20,33 @@ const runApp = () => {
   const minutesEl = document.querySelector(".timer__minutes");
   const secondsEl = document.querySelector(".timer__seconds");
 
+  const holiday = (num) => {
+    clearInterval(interval);
+    eventDate = events[num][0];
+    eventName = events[num][1];
+    eventStyle = events[num][2];
+    getDate(eventDate, eventName, eventStyle);
+  };
 
-  const getDate = ( eventDate, eventName ) => {
-    bodyEl.classList.add(eventStyle);
-    let month = parseInt( eventDate.slice(0,2));
-    let day = parseInt( eventDate.slice(3,5));
+  const getDate = ( newDate, newName, newStyle ) => {
+    bodyEl.classList.add(newStyle);
+    let month = parseInt( newDate.slice(0,2));
+    let day = parseInt( newDate.slice(3,5));
     let year = new Date().getFullYear();
     currentDate = new Date().toJSON().slice(5,10);
-    currentDate >= eventDate ? year += 1 : null;
-    eventEl.innerHTML = eventName;
+    currentDate >= newDate ? year += 1 : null;
+    eventEl.innerHTML = newName;
     yearEl.innerHTML = year;
     deadline = new Date( year, month-1, day, "00", "00", "00" );
     startClock( deadline );
-  }
+  };
 
   const startClock = ( deadline ) => {
     updateClock( deadline );
     interval = setInterval( function() {
       updateClock( deadline );
     }, 1000 );
-  }
+  };
 
   const updateClock = ( deadline ) => {
     const time = remainingTime( deadline );
@@ -46,7 +54,7 @@ const runApp = () => {
     hoursEl.innerHTML = time.hours;
     minutesEl.innerHTML = time.minutes;
     secondsEl.innerHTML = time.seconds;
-  }
+  };
 
   const remainingTime = ( deadline ) => {
     let distance = Date.parse( deadline ) - Date.parse( new Date() );
@@ -57,28 +65,17 @@ const runApp = () => {
     return {
       "days": days, "hours": hours, "minutes": minutes, "seconds": seconds
     };
-  }
+  };
 
-  const checkForDST = () => {
-    Date.prototype.stdTimezoneOffset = function() {
-      var jan = new Date(this.getFullYear(), 0, 1);
-      var jul = new Date(this.getFullYear(), 6, 1);
-      return Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
-    }
-    Date.prototype.dst = function() {
-      return this.getTimezoneOffset() < this.stdTimezoneOffset();
-    }
-    Date.prototype.dst = function() {
-      return this.getTimezoneOffset() < this.stdTimezoneOffset();
-    }
-    var date = new Date(); 
-    if (date.dst()) { 
-      return true; 
-    } else { 
-      return false; 
-    }
-  }
+  let buttonEls = document.querySelectorAll('.navigation__link');
+  for (let i=0; i<buttonEls.length; i++) {
+    buttonEls[i].addEventListener("click", (event) => {
+      let x = buttonEls[i].getAttribute("rel");
+      document.getElementById("nav-toggle").checked = false;
+      holiday(x);
+    });
+  };
 
-  getDate( eventDate, eventName );
+  holiday(5);
 
 };

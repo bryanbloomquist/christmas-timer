@@ -15,6 +15,23 @@
 
   <body onload="runApp();">
 
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="nav-toggle" />
+      <label for="nav-toggle" class="navigation__button"><span class="navigation__icon">&nbsp;</span></label>
+      <div class="navigation__background">&nbsp;</div>
+      <nav class="navigation__nav">
+        <!-- <h2 class="navigation__heading">Choose a Holiday</h2> -->
+        <ul class="navigation__list">
+          <li class="navigation__item"><a href="#" class="navigation__link" rel=0>New Years</a></li>
+          <li class="navigation__item"><a href="#" class="navigation__link" rel=1>Valentines Day</a></li>
+          <li class="navigation__item"><a href="#" class="navigation__link" rel=2>May the Fourth</a></li>
+          <li class="navigation__item"><a href="#" class="navigation__link" rel=3>Independance Day</a></li>
+          <li class="navigation__item"><a href="#" class="navigation__link" rel=4>Halloween</a></li>
+          <li class="navigation__item"><a href="#" class="navigation__link" rel=5>Christmas</a></li>
+        </ul>
+      </nav>
+    </div>
+
     <header class="header">
       Time Left Until <span id="event">&nbsp;</span>&nbsp;<span id="year">&nbsp;</span>
     </header>
