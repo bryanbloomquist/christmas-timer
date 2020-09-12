@@ -1,91 +1,88 @@
+/* enter in terminal to update css stylesheet
+
+sass --watch assets/sass/style.scss assets/css/style.css
+
+*/
+*, *::before, *::after {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  box-sizing: inherit;
+}
+
 html {
   font-size: 62.5%;
+  /* 1rem = 10px */
+  box-sizing: border-box;
 }
 
 body {
-  background-image: linear-gradient(white, royalblue);
   height: 100vh;
-  margin: 0px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-#container {
-  display: grid;
-  grid-template-columns: repeat(4, 8rem);
-  grid-template-rows: 15rem 8rem 2.5rem 18rem;
-  grid-gap: 1rem;
-  padding: 4rem 2rem;
+header {
+  font-size: 5rem;
+  font-weight: 900;
+  font-family: fantasy;
   text-align: center;
-  align-items: center;
-  justify-content: center;
-  color: #222222;
-  font-size: 1.6rem;
+  margin: 5rem 0;
 }
-
-.banner {
-  grid-column: 1/span 4;
-  grid-row: 1/span 1;
-  font-size: 4rem;
-  font-weight: 600;
-  color: firebrick;
+header #event {
+  text-transform: capitalize;
 }
 
 .timer {
-  font-size: 3em;
-  border-radius: 50%;
-  line-height: 8rem;
-  color: white;
-  border: 2px solid white;
+  margin: 5rem 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
-
-#days {
-  grid-column: 1/span 1;
-  grid-row: 2/span 1;
-  background-color: firebrick;
+.timer__days, .timer__hours, .timer__minutes, .timer__seconds {
+  flex: 0 0 80px;
+  height: 80px;
+  text-align: center;
+  font-size: 4rem;
+  font-family: math;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 1px solid;
 }
-
-.days-label {
-  grid-column: 1/span 1;
-  grid-row: 3/span 1;
+.timer__days::after {
+  content: "days";
 }
-
-#hours {
-  grid-column: 2/span 1;
-  grid-row: 2/span 1;
-  background-color: rebeccapurple;
+.timer__hours::after {
+  content: "hours";
 }
-
-.hours-label {
-  grid-column: 2/span 1;
-  grid-row: 3/span 1;
+.timer__minutes::after {
+  content: "minutes";
 }
-
-#minutes {
-  grid-column: 3/span 1;
-  grid-row: 2/span 1;
-  background-color: olivedrab;
+.timer__seconds::after {
+  content: "seconds";
 }
-
-.minutes-label {
-  grid-column: 3/span 1;
-  grid-row: 3/span 1;
-}
-
-#seconds {
-  grid-column: 4/span 1;
-  grid-row: 2/span 1;
-  background-color: royalblue;
-}
-
-.seconds-label {
-  grid-column: 4/span 1;
-  grid-row: 3/span 1;
-}
-
-.optionform {
-  grid-column: 2/span 3;
-  grid-row: 4/span 1;
-  text-align: left;
+.timer__days::after, .timer__hours::after, .timer__minutes::after, .timer__seconds::after {
+  position: absolute;
+  bottom: -2.5rem;
   font-size: 2rem;
+}
+
+.christmas {
+  background-image: url(../images/christmas-bg.png);
+}
+.christmas header {
+  color: #c10f11;
+  text-shadow: 0 0.3rem 0.6rem rgba(54, 49, 44, 0.75);
+}
+.christmas .timer {
+  color: #701814;
+}
+.christmas .timer__days, .christmas .timer__hours, .christmas .timer__minutes, .christmas .timer__seconds {
+  border-color: #b0a3a5;
+  background-color: #dddce2;
 }
 
 /*# sourceMappingURL=style.css.map */

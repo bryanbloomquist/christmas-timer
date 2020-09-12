@@ -1,0 +1,111 @@
+/* enter in terminal to update css stylesheet
+
+sass --watch assets/sass/style.scss assets/css/style.css
+
+*/
+
+////////////////////////////////////////variables
+////////////////////global
+
+////////////////////christmas
+$christmas-1: #36312c;
+$christmas-2: #b0a3a5;
+$christmas-3: #dddce2;
+$christmas-4: #c10f11;
+$christmas-5: #701814;
+
+////////////////////////////////////////styles
+
+////////////////////global
+
+*, *::before, *::after {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;	 /* 1rem = 10px */
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+header {
+  font-size: 5rem;
+  font-weight: 900;
+  font-family: fantasy;
+  text-align: center;
+  margin: 5rem 0;
+  & #event {
+    text-transform: capitalize;
+  }
+}
+
+.timer {
+  margin: 5rem 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  &__days, 
+  &__hours, 
+  &__minutes, 
+  &__seconds {
+    flex: 0 0 80px;
+    height: 80px;
+    text-align: center;
+    font-size: 4rem;
+    font-family: math;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 1px solid;
+  }
+  &__days::after{
+    content: "days";
+  }
+  &__hours::after {
+    content: "hours";
+  } 
+  &__minutes::after {
+    content: "minutes";
+  } 
+  &__seconds::after {
+    content: "seconds";
+  }
+  &__days::after, 
+  &__hours::after, 
+  &__minutes::after, 
+  &__seconds::after {
+    position: absolute;
+    bottom: -2.5rem;
+    font-size: 2rem;
+  }
+}
+
+////////////////////christmas
+
+.christmas {
+  background-image: url(../images/christmas-bg.png);
+  & header {
+    color: $christmas-4;
+    text-shadow: 0 .3rem .6rem rgba($christmas-1, 75%);
+  }
+  & .timer {
+    color: $christmas-5;
+    &__days, 
+    &__hours, 
+    &__minutes, 
+    &__seconds {
+      border-color: $christmas-2;
+      background-color: $christmas-3;
+    }
+  }
+}
