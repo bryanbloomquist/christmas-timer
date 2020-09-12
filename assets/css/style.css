@@ -24,9 +24,9 @@ body {
 }
 
 header {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 900;
-  font-family: fantasy;
+  font-family: Georgia, Times, serif;
   text-align: center;
   margin: 5rem 0;
 }
@@ -41,8 +41,8 @@ header #event {
   align-items: center;
 }
 .timer__days, .timer__hours, .timer__minutes, .timer__seconds {
-  flex: 0 0 80px;
-  height: 80px;
+  flex: 0 0 75px;
+  height: 75px;
   text-align: center;
   font-size: 4rem;
   font-family: math;
@@ -51,6 +51,8 @@ header #event {
   align-items: center;
   position: relative;
   border: 1px solid;
+  border-radius: 12px;
+  box-shadow: 0 1rem 1.5rem rgba(34, 34, 34, 0.5);
 }
 .timer__days::after {
   content: "days";
@@ -66,7 +68,9 @@ header #event {
 }
 .timer__days::after, .timer__hours::after, .timer__minutes::after, .timer__seconds::after {
   position: absolute;
-  bottom: -2.5rem;
+  bottom: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 2rem;
 }
 

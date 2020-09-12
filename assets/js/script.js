@@ -42,9 +42,9 @@ const runApp = () => {
 
   const updateClock = ( deadline ) => {
     const time = remainingTime( deadline );
-    daysEl.textContent != time.days ? daysEl.innerHTML = time.days : null;
-    hoursEl.textContent != time.hours ? hoursEl.innerHTML = time.hours :null;
-    minutesEl.textContent != time.minutes ? minutesEl.innerHTML = time.minutes : null;
+    daysEl.innerHTML = time.days;
+    hoursEl.innerHTML = time.hours;
+    minutesEl.innerHTML = time.minutes;
     secondsEl.innerHTML = time.seconds;
   }
 
