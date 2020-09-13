@@ -78,6 +78,6 @@ const runApp = () => {
     });
   };
 
-  holiday(lastHoliday);
+  holiday(lastHoliday ? lastHoliday : 5);
 
 };
