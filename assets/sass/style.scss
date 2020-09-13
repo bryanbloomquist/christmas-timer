@@ -79,14 +79,15 @@ header {
   font-weight: 900;
   font-family: Georgia, Times, serif;
   text-align: center;
-  margin: 5rem 0;
+  padding: 5rem 0;
   & #event {
     text-transform: capitalize;
   }
 }
 
 .timer {
-  margin: 5rem auto;
+  margin: 0 auto;
+  padding: 5rem 0;
   max-width: 600px;
   display: flex;
   justify-content: space-evenly;
