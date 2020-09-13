@@ -12,6 +12,7 @@ const runApp = () => {
   let eventDate = events[5][0];
   let eventName = events[5][1];
   let eventStyle = events[5][2];
+  const lastHoliday = localStorage.getItem('lastHoliday');
   const bodyEl = document.querySelector("body");
   const eventEl = document.getElementById("event");
   const yearEl = document.getElementById("year");
@@ -72,10 +73,11 @@ const runApp = () => {
     buttonEls[i].addEventListener("click", (event) => {
       let x = buttonEls[i].getAttribute("rel");
       document.getElementById("nav-toggle").checked = false;
+      localStorage.setItem('lastHoliday', x);
       holiday(x);
     });
   };
 
-  holiday(5);
+  holiday(lastHoliday);
 
 };
