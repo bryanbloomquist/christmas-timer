@@ -196,6 +196,168 @@ header #event {
   bottom: -1.5rem;
 }
 
+.newyears {
+  background-image: url(../images/newyears-bg.jpg);
+  background-position: 90%;
+}
+.newyears header {
+  color: #e3be79;
+  text-shadow: 0 0.3rem 0.6rem rgba(75, 74, 74, 0.75);
+}
+.newyears .timer {
+  color: #4c3a16;
+}
+.newyears .timer__days, .newyears .timer__hours, .newyears .timer__minutes, .newyears .timer__seconds {
+  border-color: #7a7c71;
+  background-color: #f1e5d4;
+}
+.newyears .navigation__button {
+  background-image: radial-gradient(#e3be79, #4c3a16);
+  border: 0.5rem solid #f1e5d4;
+}
+.newyears .navigation__background {
+  background-image: radial-gradient(#7a7c71, #f1e5d4);
+}
+.newyears .navigation__link:link, .newyears .navigation__link:visited {
+  color: #f1e5d4;
+  background-image: linear-gradient(120deg, transparent 50%, #e3be79 50%);
+}
+.newyears .navigation__link:hover, .newyears .navigation__linkactive {
+  color: #f1e5d4;
+}
+.newyears .navigation__icon, .newyears .navigation__icon::before, .newyears .navigation__icon::after {
+  background-color: #7a7c71;
+}
+
+.valentines {
+  background-image: url(../images/valentines-bg.png);
+}
+.valentines header {
+  color: #c02a29;
+  text-shadow: 0 0.3rem 0.6rem rgba(13, 12, 12, 0.75);
+}
+.valentines .timer {
+  color: #6d1415;
+}
+.valentines .timer__days, .valentines .timer__hours, .valentines .timer__minutes, .valentines .timer__seconds {
+  border-color: #787c7c;
+  background-color: #f3f2f2;
+}
+.valentines .navigation__button {
+  background-image: radial-gradient(#c02a29, #6d1415);
+  border: 0.5rem solid #f3f2f2;
+}
+.valentines .navigation__background {
+  background-image: radial-gradient(#787c7c, #f3f2f2);
+}
+.valentines .navigation__link:link, .valentines .navigation__link:visited {
+  color: #f3f2f2;
+  background-image: linear-gradient(120deg, transparent 50%, #c02a29 50%);
+}
+.valentines .navigation__link:hover, .valentines .navigation__linkactive {
+  color: #f3f2f2;
+}
+.valentines .navigation__icon, .valentines .navigation__icon::before, .valentines .navigation__icon::after {
+  background-color: #787c7c;
+}
+
+.starwars {
+  background-image: url(../images/starwars-bg.jpg);
+}
+.starwars header {
+  color: #808c82;
+  text-shadow: 0 0.3rem 0.6rem rgba(44, 42, 42, 0.75);
+}
+.starwars .timer {
+  color: #76848c;
+}
+.starwars .timer__days, .starwars .timer__hours, .starwars .timer__minutes, .starwars .timer__seconds {
+  border-color: #6c6b5c;
+  background-color: #aaaba4;
+}
+.starwars .navigation__button {
+  background-image: radial-gradient(#808c82, #76848c);
+  border: 0.5rem solid #aaaba4;
+}
+.starwars .navigation__background {
+  background-image: radial-gradient(#6c6b5c, #aaaba4);
+}
+.starwars .navigation__link:link, .starwars .navigation__link:visited {
+  color: #aaaba4;
+  background-image: linear-gradient(120deg, transparent 50%, #808c82 50%);
+}
+.starwars .navigation__link:hover, .starwars .navigation__linkactive {
+  color: #aaaba4;
+}
+.starwars .navigation__icon, .starwars .navigation__icon::before, .starwars .navigation__icon::after {
+  background-color: #6c6b5c;
+}
+
+.independence {
+  background-image: url(../images/independence-bg.jpg);
+}
+.independence header {
+  color: #b61f24;
+  text-shadow: 0 0.3rem 0.6rem rgba(34, 62, 136, 0.75);
+}
+.independence .timer {
+  color: #800507;
+}
+.independence .timer__days, .independence .timer__hours, .independence .timer__minutes, .independence .timer__seconds {
+  border-color: #0168ad;
+  background-color: #d8d8d8;
+}
+.independence .navigation__button {
+  background-image: radial-gradient(#b61f24, #800507);
+  border: 0.5rem solid #d8d8d8;
+}
+.independence .navigation__background {
+  background-image: radial-gradient(#0168ad, #d8d8d8);
+}
+.independence .navigation__link:link, .independence .navigation__link:visited {
+  color: #d8d8d8;
+  background-image: linear-gradient(120deg, transparent 50%, #b61f24 50%);
+}
+.independence .navigation__link:hover, .independence .navigation__linkactive {
+  color: #d8d8d8;
+}
+.independence .navigation__icon, .independence .navigation__icon::before, .independence .navigation__icon::after {
+  background-color: #0168ad;
+}
+
+.halloween {
+  background-image: url(../images/halloween-bg.jpg);
+  background-position: left;
+}
+.halloween header {
+  color: #ea6628;
+  text-shadow: 0 0.3rem 0.6rem rgba(61, 38, 27, 0.75);
+}
+.halloween .timer {
+  color: #7f2908;
+}
+.halloween .timer__days, .halloween .timer__hours, .halloween .timer__minutes, .halloween .timer__seconds {
+  border-color: #e18619;
+  background-color: #f8cdb9;
+}
+.halloween .navigation__button {
+  background-image: radial-gradient(#ea6628, #7f2908);
+  border: 0.5rem solid #f8cdb9;
+}
+.halloween .navigation__background {
+  background-image: radial-gradient(#e18619, #f8cdb9);
+}
+.halloween .navigation__link:link, .halloween .navigation__link:visited {
+  color: #f8cdb9;
+  background-image: linear-gradient(120deg, transparent 50%, #ea6628 50%);
+}
+.halloween .navigation__link:hover, .halloween .navigation__linkactive {
+  color: #f8cdb9;
+}
+.halloween .navigation__icon, .halloween .navigation__icon::before, .halloween .navigation__icon::after {
+  background-color: #e18619;
+}
+
 .christmas {
   background-image: url(../images/christmas-bg.png);
 }

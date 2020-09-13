@@ -4,7 +4,7 @@ const runApp = () => {
     ["01-01", "new year's day", "newyears"],
     ["02-14", "valentine's day", "valentines"],
     ["05-04", "may the fourth", "starwars"],
-    ["07-04", "independance day", "independance"],
+    ["07-04", "independance day", "independence"],
     ["10-31", "halloween", "halloween"],
     ["12-25", "christmas", "christmas"]
   ];
@@ -29,7 +29,7 @@ const runApp = () => {
   };
 
   const getDate = ( newDate, newName, newStyle ) => {
-    bodyEl.classList.add(newStyle);
+    bodyEl.className = newStyle;
     let month = parseInt( newDate.slice(0,2));
     let day = parseInt( newDate.slice(3,5));
     let year = new Date().getFullYear();

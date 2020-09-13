@@ -10,6 +10,41 @@ $color-white: #ebebeb;
 $color-black: #222222;
 $shadow: rgba(34, 34, 34, .5);
 
+////////////////////newyears
+$newyears-1: #4b4a4a;
+$newyears-2: #7a7c71;
+$newyears-3: #f1e5d4;
+$newyears-4: #e3be79;
+$newyears-5: #4c3a16;
+
+////////////////////valentines
+$valentines-1: #0d0c0c;
+$valentines-2: #787c7c;
+$valentines-3: #f3f2f2;
+$valentines-4: #c02a29;
+$valentines-5: #6d1415;
+
+////////////////////starwars
+$starwars-1: #2c2a2a;
+$starwars-2: #6c6b5c;
+$starwars-3: #aaaba4;
+$starwars-4: #808c82;
+$starwars-5: #76848c;
+
+////////////////////independence
+$independence-1: #223e88;
+$independence-2: #0168ad;
+$independence-3: #d8d8d8;
+$independence-4: #b61f24;
+$independence-5: #800507;
+
+////////////////////halloween
+$halloween-1: #3d261b;
+$halloween-2: #e18619;
+$halloween-3: #f8cdb9;
+$halloween-4: #ea6628;
+$halloween-5: #7f2908;
+
 ////////////////////christmas
 $christmas-1: #36312c;
 $christmas-2: #b0a3a5;
@@ -227,6 +262,243 @@ header {
   }
   &__button:hover &__icon::after {
     bottom: -1.5rem;
+  }
+}
+
+////////////////////newyears
+
+.newyears {
+  background-image: url(../images/newyears-bg.jpg);
+  background-position: 90%;
+  & header {
+    color: $newyears-4;
+    text-shadow: 0 .3rem .6rem rgba($newyears-1, 75%);
+  }
+  & .timer {
+    color: $newyears-5;
+    &__days, 
+    &__hours, 
+    &__minutes, 
+    &__seconds {
+      border-color: $newyears-2;
+      background-color: $newyears-3;
+    }
+  }
+  & .navigation {
+    &__button {
+      background-image: radial-gradient($newyears-4, $newyears-5);
+      border: .5rem solid $newyears-3;
+    }
+    &__background {
+      background-image: radial-gradient($newyears-2, $newyears-3);
+    }
+    &__link {
+      &:link,
+      &:visited {
+        color: $newyears-3;
+        background-image: linear-gradient(120deg, transparent 50%, $newyears-4 50%);
+      }  
+      &:hover,
+      &active {
+        color: $newyears-3;
+      }  
+    }
+    &__icon {
+      &,
+      &::before,
+      &::after {
+        background-color: $newyears-2;
+      }
+    }
+  }
+}
+
+////////////////////valentines
+
+.valentines {
+  background-image: url(../images/valentines-bg.png);
+  & header {
+    color: $valentines-4;
+    text-shadow: 0 .3rem .6rem rgba($valentines-1, 75%);
+  }
+  & .timer {
+    color: $valentines-5;
+    &__days, 
+    &__hours, 
+    &__minutes, 
+    &__seconds {
+      border-color: $valentines-2;
+      background-color: $valentines-3;
+    }
+  }
+  & .navigation {
+    &__button {
+      background-image: radial-gradient($valentines-4, $valentines-5);
+      border: .5rem solid $valentines-3;
+    }
+    &__background {
+      background-image: radial-gradient($valentines-2, $valentines-3);
+    }
+    &__link {
+      &:link,
+      &:visited {
+        color: $valentines-3;
+        background-image: linear-gradient(120deg, transparent 50%, $valentines-4 50%);
+      }  
+      &:hover,
+      &active {
+        color: $valentines-3;
+      }  
+    }
+    &__icon {
+      &,
+      &::before,
+      &::after {
+        background-color: $valentines-2;
+      }
+    }
+  }
+}
+
+////////////////////starwars
+
+.starwars {
+  background-image: url(../images/starwars-bg.jpg);
+  & header {
+    color: $starwars-4;
+    text-shadow: 0 .3rem .6rem rgba($starwars-1, 75%);
+  }
+  & .timer {
+    color: $starwars-5;
+    &__days, 
+    &__hours, 
+    &__minutes, 
+    &__seconds {
+      border-color: $starwars-2;
+      background-color: $starwars-3;
+    }
+  }
+  & .navigation {
+    &__button {
+      background-image: radial-gradient($starwars-4, $starwars-5);
+      border: .5rem solid $starwars-3;
+    }
+    &__background {
+      background-image: radial-gradient($starwars-2, $starwars-3);
+    }
+    &__link {
+      &:link,
+      &:visited {
+        color: $starwars-3;
+        background-image: linear-gradient(120deg, transparent 50%, $starwars-4 50%);
+      }  
+      &:hover,
+      &active {
+        color: $starwars-3;
+      }  
+    }
+    &__icon {
+      &,
+      &::before,
+      &::after {
+        background-color: $starwars-2;
+      }
+    }
+  }
+}
+
+////////////////////independence
+
+.independence {
+  background-image: url(../images/independence-bg.jpg);
+  & header {
+    color: $independence-4;
+    text-shadow: 0 .3rem .6rem rgba($independence-1, 75%);
+  }
+  & .timer {
+    color: $independence-5;
+    &__days, 
+    &__hours, 
+    &__minutes, 
+    &__seconds {
+      border-color: $independence-2;
+      background-color: $independence-3;
+    }
+  }
+  & .navigation {
+    &__button {
+      background-image: radial-gradient($independence-4, $independence-5);
+      border: .5rem solid $independence-3;
+    }
+    &__background {
+      background-image: radial-gradient($independence-2, $independence-3);
+    }
+    &__link {
+      &:link,
+      &:visited {
+        color: $independence-3;
+        background-image: linear-gradient(120deg, transparent 50%, $independence-4 50%);
+      }  
+      &:hover,
+      &active {
+        color: $independence-3;
+      }  
+    }
+    &__icon {
+      &,
+      &::before,
+      &::after {
+        background-color: $independence-2;
+      }
+    }
+  }
+}
+
+////////////////////halloween
+
+.halloween {
+  background-image: url(../images/halloween-bg.jpg);
+  background-position: left;
+  & header {
+    color: $halloween-4;
+    text-shadow: 0 .3rem .6rem rgba($halloween-1, 75%);
+  }
+  & .timer {
+    color: $halloween-5;
+    &__days, 
+    &__hours, 
+    &__minutes, 
+    &__seconds {
+      border-color: $halloween-2;
+      background-color: $halloween-3;
+    }
+  }
+  & .navigation {
+    &__button {
+      background-image: radial-gradient($halloween-4, $halloween-5);
+      border: .5rem solid $halloween-3;
+    }
+    &__background {
+      background-image: radial-gradient($halloween-2, $halloween-3);
+    }
+    &__link {
+      &:link,
+      &:visited {
+        color: $halloween-3;
+        background-image: linear-gradient(120deg, transparent 50%, $halloween-4 50%);
+      }  
+      &:hover,
+      &active {
+        color: $halloween-3;
+      }  
+    }
+    &__icon {
+      &,
+      &::before,
+      &::after {
+        background-color: $halloween-2;
+      }
+    }
   }
 }
 
